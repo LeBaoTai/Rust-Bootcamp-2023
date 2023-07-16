@@ -7,15 +7,15 @@
 struct Person {
     name: String,
     age: u8,
-    hobby: String
+    hobby: String,
 }
 fn exercise1() -> Person {
     let age = 30;
-    // Hobby = Rust 
+    // Hobby = Rust
     let p = Person {
         name: String::from("sunface"),
         age,
-        hobby: String::from("Rust")
+        hobby: String::from("Rust"),
     };
 
     p
@@ -27,7 +27,7 @@ fn exercise1() -> Person {
 // Run test
 
 // Define the struct
-struct Agent  {
+struct Agent {
     name: String,
     age: u32,
 }
@@ -102,7 +102,6 @@ fn exercise4() {
     };
 
     println!("user: {:#?}", u1);
-
 }
 
 // Exercise 5
@@ -123,10 +122,8 @@ fn exercise5() {
         int_val: 20,
     });
 
-    
     let moved = &foos[0];
 
-    
     let moved_field = &foos[0].str_val;
 }
 
@@ -180,10 +177,9 @@ mod tests {
         let p_expectation = Person {
             name: String::from("sunface"),
             age: 30,
-            hobby:String::from("Rust") 
+            hobby: String::from("Rust"),
         };
         assert_eq!(p, p_expectation);
-        
     }
 
     // Test for exercise 2
@@ -211,9 +207,7 @@ mod tests {
 
         calculator.clear();
         assert_eq!(calculator.get_value(), 0);
-
     }
-
 
     // Test for exercise 6
     #[test]
@@ -259,5 +253,4 @@ mod tests {
         assert_eq!(package.get_fees(cents_per_gram), 4500);
         assert_eq!(package.get_fees(cents_per_gram * 2), 9000);
     }
-
 }
